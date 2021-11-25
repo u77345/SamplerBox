@@ -54,6 +54,11 @@ USE_OLED = False
 # Set True to use LCD of Pimoroni PirateAudio hat. Configure below
 USE_PIMORONI_LCD = False
 
+# Set True to use the Adafruit piTFT LCD over framebuffer/pygame
+USE_PITFT_LCD = False
+LOG_PITFT_LCD = False
+PITFT_LCD_PADDING = 2
+
 # Set True to use a 7-segment display via I2C
 # Two versions: original sparkfun display and cheap HT16K33 based ebay version
 USE_I2C_7SEGMENTDISPLAY = False

@@ -239,6 +239,14 @@ try:
             pimlcd.display(msg,menu1,menu2,menu3)
         display('Start Samplerbox')
 
+    elif gv.cp.getboolean(gv.cfg,"USE_PITFT_LCD".lower()):
+        gv.GPIO=True
+        import PiTFT_LCD
+        pitftlcd = PiTFT_LCD.pitft_lcd()
+        def display(msg='',msg7seg='',menu1='',menu2='',menu3='',*z):
+            pitftlcd.display(msg,menu1,menu2,menu3)
+        display('Start Samplerbox')
+
     elif gv.cp.getboolean(gv.cfg,"USE_I2C_7SEGMENTDISPLAY".lower()):
         import I2C_7segment
         def display(msg,msg7seg='',*z):
